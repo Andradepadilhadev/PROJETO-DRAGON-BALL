@@ -1,0 +1,252 @@
+/* Define estilos padrão para todos os elementos */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Anton", sans-serif;
+}
+
+/* Estilos para o corpo da página */
+body {
+  display: flex;
+  justify-content: left; /* Alinha o conteúdo à esquerda */
+
+  height: 100vh; /* Define a altura como 100% da viewport */
+  background-color: rgb(0, 0, 0); /* Cor de fundo preta */
+}
+
+/* Estilos para o logotipo do Dragon Ball */
+.logo-dragon-ball {
+  display: flex;
+  position: fixed; /* Posicionado fixamente na tela */
+  justify-content: center; /* Alinha o conteúdo ao centro horizontalmente */
+
+  height: 22vh;
+  width: 45vh;
+  margin: 8vw; /* Centraliza horizontalmente */
+  margin-top: 35vh; /* Define a margem superior */
+  z-index: 0; /* Coloca o elemento abaixo de outros */
+  animation: pulse 5s infinite; /* Aplica uma animação */
+}
+
+/* Define uma animação chamada "rubberBand" */
+@keyframes rubberBand {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, +50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Estilos para o logotipo do Vegeta */
+.logo-vegeta {
+  position: fixed; /* Posicionado fixamente na tela */
+  height: 35vw;
+  width: 30vw;
+
+  margin: auto; /* Centraliza horizontalmente */
+  left: 8vh; /* Define a posição horizontal */
+  margin-top: -3vh; /* Define a margem superior */
+  z-index: 1; /* Coloca o elemento acima de outros */
+  animation: flash 35s infinite; /* Aplica uma animação */
+}
+
+/* Estilos para o ícone do LinkedIn */
+.linkdin {
+  position: fixed; /* Posicionado fixamente na tela */
+  height: 200px;
+  right: -5px;
+  bottom: -50px;
+  cursor: pointer;
+  z-index: 1; /* Coloca o elemento acima de outros */
+}
+
+/* Estilos para a esfera */
+.esfera {
+  position: fixed; /* Posicionado fixamente na tela */
+  height: 2vh;
+  width: 2vw;
+  right: 75vh;
+  bottom: 70vh;
+  margin-top: 80vw;
+  animation: flash 19s infinite; /* Aplica uma animação */
+}
+
+/* Estilos para o vídeo de fundo */
+.video-background {
+  position: fixed; /* Posicionado fixamente na tela */
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  object-fit: cover; /* Garante que o vídeo cubra todo o espaço disponível */
+  z-index: -1; /* Define um valor negativo para colocar o vídeo atrás dos outros elementos */
+}
+
+/* Estilos para a máscara */
+.mascara {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+
+  /* Gradiente de fundo */
+  background: linear-gradient(
+    109deg,
+    rgba(0, 0, 0, 0.979) 5%,
+    rgba(10, 12, 16, 0) 50%,
+    rgba(0, 0, 0, 0.973) 90%
+  );
+}
+
+/* Estilos para o cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Alinha os itens verticalmente */
+
+  position: fixed; /* Posicionado fixamente na tela */
+  gap: 25px;
+
+  margin: 10px;
+  font-size: 50vw; /* Tamanho da fonte */
+  left: 3vh;
+  z-index: 2; /* Coloca o elemento acima de outros */
+
+  cursor: pointer;
+  color: rgb(255, 255, 255); /* Cor do texto */
+}
+
+/* Estilos para os links no cabeçalho */
+.header a {
+  text-decoration: none; /* Remove a decoração de texto */
+  color: rgb(255, 255, 255); /* Cor dos links */
+}
+
+/* Estilos para links no hover */
+.header a:hover {
+  color: rgb(5, 99, 116); /* Cor ao passar o mouse sobre o link */
+  transition: 0.5s ease-in-out; /* Transição suave */
+}
+
+/* Estilos para parágrafos */
+p {
+  display: flex;
+  position: absolute; /* Posicionado absolutamente na tela */
+  font-size: clamp(0px, 3.5vw, 18px);
+
+  margin: 50px;
+  margin-top: -5vh;
+  white-space: pre-line; /* Permite quebras de linha */
+  transform: translate(0, 55vh);
+  color: rgb(255, 255, 255); /* Cor do texto */
+}
+
+/* Estilos para parágrafos no hover */
+p:hover {
+  color: rgb(0, 0, 0); /* Cor do texto ao passar o mouse sobre o parágrafo */
+}
+
+/* Estilos para botões */
+button {
+  display: flex;
+  position: absolute; /* Posicionado absolutamente na tela */
+  background-color: rgba(17, 7, 102, 0.466);
+  color: rgb(5, 99, 116); /* Cor do texto */
+  font-size: clamp(0px, 5vw, 30px);
+  padding: 10px 20px; /* Adiciona espaço interno ao botão */
+  margin: 30px;
+  border-radius: 10vw;
+  border: none; /* Remove a borda */
+  margin-top: 5vh;
+  left: 9vh;
+
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Remove a propriedade text-size-adjust */
+  transform: translate(0, 70vh);
+}
+
+/* Estilos para botões no hover */
+button:hover {
+  color: rgb(174, 178, 179); /* Cor do texto ao passar o mouse sobre o botão */
+  transition: 0.5s ease-out; /* Transição suave */
+  font-size: 35px; /* Tamanho da fonte ao passar o mouse */
+}
+
+/* Estilos para o formulário "Fale Comigo" */
+.formulario-fale-comigo {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+
+  background: linear-gradient(
+    109deg,
+    rgba(0, 0, 0, 0.979) 5%,
+    rgba(10, 12, 16, 0) 50%,
+    rgba(0, 0, 0, 0.973) 90%
+  );
+
+  position: absolute;
+  min-width: 10%;
+  margin-top: 20vh;
+  left: -40vh;
+  padding: 60px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+/* Estilos para o botão "Enviar" no formulário */
+.formulario-enviar {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+
+  background-color: rgba(0, 0, 0, 0.301);
+
+  margin-top: -77vh;
+  left: 80px;
+  padding: 3px;
+  border-radius: 3px;
+  z-index: 1; /* Coloca o elemento acima de outros */
+}
+
+/* Estilos para campos de entrada */
+input {
+  height: 40px;
+  border-radius: 7px;
+  border: 2px;
+  border: rgb(7, 109, 156);
+  padding-left: 10px;
+  outline-color: blue;
+}
+
+/* Estilos para a área de texto */
+textarea {
+  height: 100px;
+  width: 170px;
+  border-radius: 7px;
+  border: 2px;
+  border: rgb(5, 6, 90);
+  padding-left: 10px;
+  outline-color: blue;
+}
+
+/* Estilos para mídias de tela pequenas */
+@media (max-width: 450px) {
+}
+
+/* Estilos adicionais para o ícone do LinkedIn */
+.linkdin {
+  right: 4vh; /* Define a posição horizontal */
+}
+
+/* Estilos adicionais para os links no cabeçalho */
+.header a {
+  font-size: 23px; /* Tamanho da fonte */
+  margin: 10px; /* Margem entre os links */
+}
