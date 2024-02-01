@@ -9,6 +9,7 @@
 /* Estilos para o corpo da página */
 body {
   display: flex;
+
   justify-content: left; /* Alinha o conteúdo à esquerda */
 
   height: 100vh; /* Define a altura como 100% da viewport */
@@ -17,15 +18,13 @@ body {
 
 /* Estilos para o logotipo do Dragon Ball */
 .logo-dragon-ball {
-  display: flex;
   position: fixed; /* Posicionado fixamente na tela */
-  justify-content: center; /* Alinha o conteúdo ao centro horizontalmente */
 
   height: 22vh;
   width: 45vh;
   margin: 8vw; /* Centraliza horizontalmente */
-  margin-top: 35vh; /* Define a margem superior */
-  z-index: 0; /* Coloca o elemento abaixo de outros */
+  margin-top: 25vh; /* Define a margem superior */
+  z-index: -1; /* Coloca o elemento abaixo de outros */
   animation: pulse 5s infinite; /* Aplica uma animação */
 }
 
@@ -50,7 +49,7 @@ body {
 
   margin: auto; /* Centraliza horizontalmente */
   left: 8vh; /* Define a posição horizontal */
-  margin-top: -3vh; /* Define a margem superior */
+  margin-top: -2vh; /* Define a margem superior */
   z-index: 1; /* Coloca o elemento acima de outros */
   animation: flash 35s infinite; /* Aplica uma animação */
 }
@@ -135,19 +134,17 @@ body {
 /* Estilos para parágrafos */
 p {
   display: flex;
+  align-items: center;
   position: absolute; /* Posicionado absolutamente na tela */
-  font-size: clamp(0px, 3.5vw, 18px);
 
-  margin: 50px;
-  margin-top: -5vh;
+  font-size: clamp(0px, 4vw, 25px);
+  width: 90%; /* Largura relativa, ajusta dinamicamente conforme a largura da tela */
+  max-height: 300px; /* Defina uma altura máxima adequada */
+  margin: 5vh; /* Margens superior e inferior automáticas e centralizadas horizontalmente */
+  margin-top: 45vh;
   white-space: pre-line; /* Permite quebras de linha */
-  transform: translate(0, 55vh);
+  z-index: 1; /* Coloca o elemento acima de outros */
   color: rgb(255, 255, 255); /* Cor do texto */
-}
-
-/* Estilos para parágrafos no hover */
-p:hover {
-  color: rgb(0, 0, 0); /* Cor do texto ao passar o mouse sobre o parágrafo */
 }
 
 /* Estilos para botões */
@@ -161,7 +158,7 @@ button {
   margin: 30px;
   border-radius: 10vw;
   border: none; /* Remove a borda */
-  margin-top: 5vh;
+  margin-top: 10vh;
   left: 9vh;
 
   cursor: pointer;
