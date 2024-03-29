@@ -18,7 +18,7 @@ body {
 
 /* Estilos para o logotipo do Dragon Ball */
 .logo-dragon-ball {
-  position: fixed; /* Posicionado fixamente na tela */
+  position: absolute; /* Posicionado fixamente na tela */
 
   height: 22vh;
   width: 45vh;
@@ -43,12 +43,12 @@ body {
 
 /* Estilos para o logotipo do Vegeta */
 .logo-vegeta {
-  position: fixed; /* Posicionado fixamente na tela */
-  height: 35vw;
+  position: absolute; /* Posicionado fixamente na tela */
+  height: 30vw;
   width: 30vw;
 
   margin: auto; /* Centraliza horizontalmente */
-  left: 8vh; /* Define a posição horizontal */
+  left: 5vh; /* Define a posição horizontal */
   margin-top: -2vh; /* Define a margem superior */
   z-index: 1; /* Coloca o elemento acima de outros */
   animation: flash 35s infinite; /* Aplica uma animação */
@@ -73,6 +73,7 @@ body {
   bottom: 70vh;
   margin-top: 80vw;
   animation: flash 19s infinite; /* Aplica uma animação */
+  z-index: -1; /* Coloca o elemento acima de outros */
 }
 
 /* Estilos para o vídeo de fundo */
@@ -161,6 +162,7 @@ button {
   margin-top: 10vh;
   left: 9vh;
 
+  z-index: 2; /* Coloca o elemento acima de outros */
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
@@ -172,7 +174,7 @@ button {
 button:hover {
   color: rgb(174, 178, 179); /* Cor do texto ao passar o mouse sobre o botão */
   transition: 0.5s ease-out; /* Transição suave */
-  font-size: 35px; /* Tamanho da fonte ao passar o mouse */
+  font-size: 30px; /* Tamanho da fonte ao passar o mouse */
 }
 
 /* Estilos para o formulário "Fale Comigo" */
@@ -191,10 +193,11 @@ button:hover {
   position: absolute;
   min-width: 10%;
   margin-top: 20vh;
-  left: -40vh;
+  left: -45vh;
   padding: 60px;
   border-radius: 10px;
   gap: 10px;
+  z-index: 2; /* Coloca o elemento acima de outros */
 }
 
 /* Estilos para o botão "Enviar" no formulário */
@@ -203,12 +206,10 @@ button:hover {
   position: absolute;
   cursor: pointer;
 
-  background-color: rgba(0, 0, 0, 0.301);
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: -81vh;
+  left: 65px;
 
-  margin-top: -77vh;
-  left: 80px;
-  padding: 3px;
-  border-radius: 3px;
   z-index: 1; /* Coloca o elemento acima de outros */
 }
 
@@ -234,7 +235,7 @@ textarea {
 }
 
 /* Estilos para mídias de tela pequenas */
-@media (max-width: 450px) {
+@media only screen and (max-width: 850px) {
 }
 
 /* Estilos adicionais para o ícone do LinkedIn */
@@ -246,4 +247,89 @@ textarea {
 .header a {
   font-size: 23px; /* Tamanho da fonte */
   margin: 10px; /* Margem entre os links */
+}
+p {
+  font-size: large;
+}
+
+@media only screen and (max-width: 850px) {
+  p {
+    font-size: medium;
+    align-items: center;
+    position: fixed; /* Posicionado absolutamente na tela */
+    width: 80%; /* Largura relativa, ajusta dinamicamente conforme a largura da tela */
+    max-height: 300px; /* Defina uma altura máxima adequada */
+    margin: 5vh; /* Margens superior e inferior automáticas e centralizadas horizontalmente */
+    margin-top: 60vh;
+  }
+
+  .logo-dragon-ball {
+    height: 20vh;
+    width: 40vh;
+    margin: 8vw; /* Centraliza horizontalmente */
+    margin-top: 40vh; /* Define a margem superior */
+    left: -30px;
+  }
+
+  .logo-vegeta {
+    position: absolute; /* Posicionado fixamente na tela */
+    height: 40vw;
+    width: 50vw;
+
+    left: 1vh; /* Define a posição horizontal */
+    margin-top: 20vh; /* Define a margem superior */
+  }
+
+  /* Estilos adicionais para o ícone do LinkedIn */
+  .linkdin {
+    right: 4vh; /* Define a posição horizontal */
+  }
+
+  /* Estilos adicionais para os links no cabeçalho */
+  .header a {
+    font-size: 23px; /* Tamanho da fonte */
+    margin: 10px; /* Margem entre os links */
+  }
+  p {
+    font-size: large;
+  }
+}
+
+@media only screen and (max-width: 648px) {
+  p {
+    font-size: medium;
+    align-items: center;
+    position: fixed; /* Posicionado absolutamente na tela */
+    width: 80%; /* Largura relativa, ajusta dinamicamente conforme a largura da tela */
+    max-height: 300px; /* Defina uma altura máxima adequada */
+    margin: 5vh; /* Margens superior e inferior automáticas e centralizadas horizontalmente */
+    margin-top: 45vh;
+  }
+  .logo-dragon-ball {
+    position: fixed; /* Posicionado fixamente na tela */
+    height: 13vh;
+    width: 20vh;
+    margin: 15vw; /* Centraliza horizontalmente */
+    margin-top: 35vh; /* Define a margem superior */
+  }
+
+  .logo-vegeta {
+    position: fixed; /* Posicionado fixamente na tela */
+    height: 40vw;
+    width: 40vw;
+
+    left: -1vh; /* Define a posição horizontal */
+    margin-top: 25vh; /* Define a margem superior */
+  }
+  .linkdin {
+    position: fixed; /* Posicionado fixamente na tela */
+    height: 100px;
+    right: 100px;
+    bottom: -20px;
+    cursor: pointer;
+    z-index: 1; /* Coloca o elemento acima de outros */
+  }
+  button:hover {
+    font-size: 20px; /* Tamanho da fonte ao passar o mouse */
+  }
 }
