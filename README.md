@@ -1,4 +1,4 @@
-<h1>Este projeto é resultado do meu aprendizado na DevClub, sob a orientação do meu mentor, Rodolfo Morri. Estou extremamente satisfeito por mais um desafio concluído cada resultado e unico pra cima sempre !! 💪 🚀🌟</h1>
+<h1>Dragon Ball Z 🏆Projeto vencedor do concurso Bebê Dev 🏆.Este projeto é resultado do meu aprendizado na DevClub, sob a orientação do meu mentor, Rodolfo Morri. Estou extremamente satisfeito por mais um desafio concluído cada resultado e unico pra cima sempre !! 💪 🚀🌟</h1>
 <br>
 
 <p>▶️ Funcionalidades Principais: Land Page
